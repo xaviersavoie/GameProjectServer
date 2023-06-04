@@ -1,0 +1,31 @@
+#include <nlohmann/json.hpp>
+#include <iostream>
+#include <sstream>
+
+using json = nlohmann::json;
+
+int main() {
+  //JSON text literal assignment
+  auto text = R"(
+  {
+  "Response" : true,
+  "Source" : "localhost"
+  }{
+  "Response" : false,
+  "Source" : "localhost"
+  }
+  )";
+
+  std::istringstream iss(text);
+
+  std::cout << iss.str() << std::endl;
+
+  json firstConcatJSONObject, secondConcatJSONObject;
+
+  iss >> firstConcatJSONObject;
+  iss >> secondConcatJSONObject;
+
+  std::cout << "First JSON object's Response value in concatenated string : " << firstConcatJSONObject["Response"] << std::endl;
+  std::cout << "Second JSON object's Response value in concatenated string : " << secondConcatJSONObject["Response"] << std::endl;
+  
+}
