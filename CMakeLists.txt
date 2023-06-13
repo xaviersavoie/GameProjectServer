@@ -17,10 +17,6 @@ add_definitions(-D BOOST_ASIO_HAS_STD_CHRONO)
 
 message(${CMAKE_CURRENT_SOURCE_DIR})
 
-set( Boost_INSTALL ${CMAKE_CURRENT_SOURCE_DIR}/include/boost_1_81_0)
-set( Boost_INCLUDE_DIR ${Boost_INSTALL})
-set( Boost_LIB_DIR ${Boost_INSTALL}/libs )
-
 find_package(Boost COMPONENTS chrono json system thread REQUIRED)
 
 
