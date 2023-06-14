@@ -18,7 +18,7 @@ add_definitions(-D BOOST_ASIO_HAS_STD_CHRONO)
 message(${CMAKE_CURRENT_SOURCE_DIR})
 
 
-SET(Boost_INCLUDE_DIR /home/runner/work/GameProjectServer/GameProjectServer/boost/boost)
+SET(Boost_INCLUDE_DIR /home/runner/work/GameProjectServer/GameProjectServer/boost/boost/include/boost_1_81_0)
 
 find_package(Boost COMPONENTS chrono json system thread REQUIRED)
 
